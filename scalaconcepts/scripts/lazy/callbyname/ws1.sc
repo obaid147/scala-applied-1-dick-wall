@@ -4,7 +4,7 @@ def shallBeGivenRewardOrExtractingFine(isAgeAppropriate: Boolean,
                                        givenReward: => Int, // call by name
                                        extractFine: => Int, // call by name
                                        currentSavingMoney: Int): (String, Int) = {
-  if(isAgeAppropriate) ("Reward given", currentSavingMoney + givenReward)
+  if(isAgeAppropriate) ("Reward given, haha", currentSavingMoney + givenReward)
   else ("Fine extracted", currentSavingMoney - extractFine)
 }
 
