@@ -27,11 +27,11 @@ def salaryDeductedOrCredited(isEligibleToGoToInfinite: Boolean, goToInfiniteRewa
   if(isEligibleToGoToInfinite) goToInfiniteReward else fineAsYouCannotGoToInfinite
 }
 
-salaryDeductedOrCredited(false, infinite())
+salaryDeductedOrCredited(isEligibleToGoToInfinite = false, infinite())
 
 // ------------------------trick 1--------------------------
 // these 2 numbers are same
-def byValuePrint(x: Long) = {
+def byValuePrint(x: Long): Unit = {
   println(x)
   println(x)
 }
@@ -41,7 +41,7 @@ byValuePrint(System.nanoTime())
 // these 2 numbers are different because we use => by name arg,
 // then the expression System.nanoTime() is passed literally
 // So byNamePrint will evaluate System.nanoTime() at every moment it is used.
-def byNamePrint(x: => Long) = {
+def byNamePrint(x: => Long): Unit = {
   println(x)
   println(x)
 }
