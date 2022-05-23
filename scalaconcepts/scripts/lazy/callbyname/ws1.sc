@@ -47,3 +47,16 @@ def byNamePrint(x: => Long): Unit = {
 }
 
 byNamePrint(System.nanoTime())
+
+
+
+def factorial(n: BigInt): BigInt = {
+  if (n <= 1)
+    1
+  else
+    n * factorial(n - 1)
+}
+
+for(i <- 1 to 10){
+  println(s"Factorial of $i = ${factorial(i)}")
+}
